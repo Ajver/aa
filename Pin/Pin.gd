@@ -12,3 +12,8 @@ func _physics_process(delta):
 
 func on_circle_hit():
 	set_physics_process(false)
+
+func _on_Pin_area_entered(area):
+	if area.name != "Circle":
+		# Game Over
+		print("game over: " + area.name)

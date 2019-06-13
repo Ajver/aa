@@ -1,13 +1,25 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Circle/Circle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Views/PinSpawner.gd" type="Script" id=2]
+[ext_resource path="res://small_circle.png" type="Texture" id=3]
 
 [node name="Game" type="Node2D"]
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 480.0
+margin_bottom = 854.0
+color = Color( 0.0588235, 0.0588235, 0.0588235, 1 )
 
 [node name="Circle" parent="." instance=ExtResource( 1 )]
 position = Vector2( 240, 280 )
 
 [node name="PinSpawner" type="Position2D" parent="."]
-position = Vector2( 240, 760 )
+position = Vector2( 240, 680 )
 script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="PinSpawner"]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+texture = ExtResource( 3 )
