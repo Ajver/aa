@@ -9,7 +9,7 @@ radius = 75.0
 
 [node name="Circle" type="Area2D"]
 collision_layer = 2
-collision_mask = 4
+collision_mask = 8
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -30,4 +30,6 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "12"
 align = 1
 valign = 1
+
+[node name="PinsContainer" type="Node2D" parent="."]
 [connection signal="area_entered" from="." to="." method="_on_Circle_area_entered"]
