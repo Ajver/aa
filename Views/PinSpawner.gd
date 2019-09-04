@@ -2,8 +2,8 @@ extends Position2D
 
 var Pin = load("res://Pin/Pin.tscn")
 
-func _process(delta):
-	if Input.is_action_just_pressed("shot"):
+func _input(event):
+	if Input.is_action_just_pressed("shot") or event is InputEventScreenTouch:
 		spawn_pin()
 
 func spawn_pin():

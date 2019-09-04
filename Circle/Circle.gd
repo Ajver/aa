@@ -10,7 +10,6 @@ var next_pin = null
 var score : int = 0 setget set_score
 
 onready var score_label = $Score
-onready var pins_container = $PinsContainer
 
 func _ready() -> void:
 	set_score(0)
@@ -41,7 +40,7 @@ func _on_Circle_area_entered(area) -> void:
 func reparent_next_pin() -> void:
 	var pin_global_transform = next_pin.global_transform
 	next_pin.get_parent().remove_child(next_pin)
-	pins_container.add_child(next_pin)
+	add_child(next_pin)
 	next_pin.global_transform = pin_global_transform
 	
 func set_score(value:int) -> void:

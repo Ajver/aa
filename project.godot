@@ -56,5 +56,7 @@ pointing/emulate_touch_from_mouse=true
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
 environment/default_clear_color=Color( 0.254902, 0.254902, 0.254902, 1 )
 environment/default_environment="res://default_env.tres"
