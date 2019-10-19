@@ -24,7 +24,7 @@ func _input(event):
 	if not can_reload_game:
 		return
 		
-	if Input.is_action_just_pressed("shot") or (event is InputEventScreenTouch and event.is_pressed()):
+	if event is InputEventScreenTouch and event.is_pressed():
 		is_game_running = true
 		emit_signal("reload_game")
 

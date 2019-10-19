@@ -3,8 +3,8 @@ extends Position2D
 var Pin = load("res://Pin/Pin.tscn")
 onready var game = get_parent()
 
-func _process(delta):
-	if Input.is_action_just_pressed("shot"):
+func _input(event):
+	if event is InputEventScreenTouch and event.is_pressed():
 		spawn_pin()
 
 func spawn_pin():
