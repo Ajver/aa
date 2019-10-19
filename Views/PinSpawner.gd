@@ -3,7 +3,7 @@ extends Position2D
 var Pin = load("res://Pin/Pin.tscn")
 
 func _input(event):
-	if Input.is_action_just_pressed("shot") or event is InputEventScreenTouch:
+	if Input.is_action_just_pressed("shot") or (event is InputEventScreenTouch and event.is_pressed()):
 		spawn_pin()
 
 func spawn_pin():
