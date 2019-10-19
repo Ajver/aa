@@ -14,7 +14,7 @@ func _ready():
 	connect("reload_game", $PinSpawner, "_on_reload_game")
 	is_game_running = true
 
-func _process(delta):
+func _input(event):
 	if Input.is_action_just_pressed("exit_game"):
 		get_tree().quit()
 	
@@ -24,7 +24,7 @@ func _process(delta):
 	if not can_reload_game:
 		return
 		
-	if Input.is_action_just_pressed("shot"):
+	if Input.is_action_just_pressed("shot") or event is InputEventScreenTouch and event.is_pressed():
 		is_game_running = true
 		emit_signal("reload_game")
 
