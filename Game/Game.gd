@@ -8,7 +8,7 @@ var can_reload_game = false
 
 func _ready():
 	connect("game_over", $Circle, "_on_game_over")
-	connect("game_over", $PinSpawner, "_on_game_over")
+	#("game_over", $PinSpawner, "_on_game_over")
 	connect("game_over", $Background/AnimationPlayer, "_on_game_over")
 	connect("reload_game", $Circle, "_on_reload_game")
 	connect("reload_game", $PinSpawner, "_on_reload_game")
